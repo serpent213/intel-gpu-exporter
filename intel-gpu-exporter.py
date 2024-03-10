@@ -70,9 +70,9 @@ def update(data):
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
-    start_http_server(8080)
+    start_http_server(9697)
 
-    period = os.getenv("REFRESH_PERIOD_MS", 5000)
+    period = os.getenv("REFRESH_PERIOD_MS", 15000)
 
     cmd = '/usr/bin/intel_gpu_top -J -s {}'.format(int(period))
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
