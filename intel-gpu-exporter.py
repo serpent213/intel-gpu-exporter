@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     period = os.getenv("REFRESH_PERIOD_MS", 15000)
 
-    cmd = '/usr/bin/intel_gpu_top -J -s {}'.format(int(period))
+    cmd = 'intel_gpu_top -J -s {}'.format(int(period))
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     logging.info('Started ' + cmd)
